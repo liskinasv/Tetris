@@ -1,0 +1,5 @@
+C:\Users\User\source\repos\Tetris\Collections\obj\Debug\net6.0\Collections.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Tetris\Collections\obj\Debug\net6.0\Collections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Tetris\Collections\obj\Debug\net6.0\Collections.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Tetris\Collections\obj\Debug\net6.0\Collections.AssemblyInfo.cs
+C:\Users\User\source\repos\Tetris\Collections\obj\Debug\net6.0\Collections.csproj.CoreCompileInputs.cache
