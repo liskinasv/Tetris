@@ -15,7 +15,7 @@ Thread.Sleep(500);
 figures[0].Draw();
 
 figures[0].Hide();
-figures[0].Move(Direction.Down);
+figures[0].Rotate();
 figures[0].Draw();
 
 Thread.Sleep(500);
@@ -44,8 +44,9 @@ figures[1].Draw();
 Thread.Sleep(500);
 
 figures[1].Hide();
-figures[1].Move(Direction.Right);
+figures[1].Rotate();
 figures[1].Draw();
+
 Thread.Sleep(500);
 
 figures[1].Hide();
@@ -61,6 +62,17 @@ Thread.Sleep(500);
 figures[1].Hide();
 figures[1].Move(Direction.Right);
 figures[1].Draw();
+Thread.Sleep(500);
+
+figures[1].Hide();
+figures[1].Move(Direction.Right);
+figures[1].Draw();
+Thread.Sleep(500);
+
+figures[1].Hide();
+figures[1].Rotate();
+figures[1].Draw();
+
 Thread.Sleep(500);
 
 Console.ReadLine();
