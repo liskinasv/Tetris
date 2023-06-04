@@ -5,75 +5,30 @@ Console.SetWindowSize(40, 30);
 Console.SetBufferSize(40, 30);
 
 
-Figure[] figures = new Figure[2];
-figures[0] = new Squery(1, 3, '*');
-figures[1] = new Stick(10, 3, '#');
+FigureGenerator generator = new FigureGenerator(20, 0, '*');
+Figure s = null;
 
-
-
-Thread.Sleep(500);
-figures[0].Draw();
-
-figures[0].Hide();
-figures[0].Rotate();
-figures[0].Draw();
-
-Thread.Sleep(500);
-
-figures[0].Hide();
-figures[0].Move(Direction.Right);
-figures[0].Draw();
-
-Thread.Sleep(500);
-
-figures[0].Hide();
-figures[0].Move(Direction.Right);
-figures[0].Draw();
-
-Thread.Sleep(500);
-
-figures[0].Hide();
-figures[0].Move(Direction.Down);
-figures[0].Draw();
-
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Move(Direction.Down);
-figures[1].Draw();
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Rotate();
-figures[1].Draw();
-
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Move(Direction.Right);
-figures[1].Draw();
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Move(Direction.Right);
-figures[1].Draw();
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Move(Direction.Right);
-figures[1].Draw();
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Move(Direction.Right);
-figures[1].Draw();
-Thread.Sleep(500);
-
-figures[1].Hide();
-figures[1].Rotate();
-figures[1].Draw();
-
-Thread.Sleep(500);
-
+for (int i = 0; i < 20; i++)
+{
+    FigureFall(generator, out s);
+    s.Draw();
+}
 Console.ReadLine();
+
+
+static void FigureFall(FigureGenerator generator, out Figure f)
+{
+    f = generator.GetNewFigure();
+
+    f.Draw();
+
+    for (int j = 0; j < 20; j++)
+    {
+        f.Hide();
+        f.Move(Direction.Down);
+        f.Draw();
+
+        Thread.Sleep(200);
+    }
+}
 
