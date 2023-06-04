@@ -16,9 +16,8 @@ namespace Tetris
 
         }
 
-        internal override void Rotate()
-        {
-            
-        }
+
+        public override void Rotate(Point[] pArray) { }
+
     }
 }

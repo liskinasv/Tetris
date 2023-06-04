@@ -2,12 +2,13 @@
 using System.Reflection.Metadata;
 using Tetris;
 
-Console.SetWindowSize(40, 30);
-Console.SetBufferSize(40, 30);
 
+Field.Width = 40;
+Field.Height = 30;
 
 FigureGenerator generator = new FigureGenerator(20, 0, '*');
 Figure currentFigure = generator.GetNewFigure();
+
 
 while (true)
 {
@@ -23,15 +24,20 @@ void HandleKey(Figure figure, ConsoleKeyInfo key)
     switch(key.Key)
     {
         case ConsoleKey.LeftArrow:
-            figure.Move(Direction.Left); 
+            figure.TryMove(Direction.LEFT); 
             break;
         case ConsoleKey.RightArrow: 
-            figure.Move(Direction.Right); 
+            figure.TryMove(Direction.RIGHT); 
             break;
         case ConsoleKey.DownArrow: 
-            figure.Move(Direction.Down); 
+            figure.TryMove(Direction.DOWN); 
+            break;
+        case ConsoleKey.Spacebar:
+            figure.TryRotate();
             break;
     }
 }
+
+
 
 
